@@ -16,3 +16,35 @@ body {
         background-color: blue;
     }
 }
+
+/*Add three div: one div with the id="small", one div with the id="medium", another div with the id="large". In each element add the word small, medium and large respectively as content for display purposes.
+
+Make it so only one div is displayed, according to the width of the current viewport.*/
+
+#medium, #large {
+    display: none;
+}
+
+@media only screen and (min-width: 480px) {
+    #small {
+        display: none;
+    }
+
+    #medium {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #small {
+        display: none;
+    }
+
+    #medium {
+        display: none;
+    }
+
+    #large {
+        display: block;
+    }
+}
