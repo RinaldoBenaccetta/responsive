@@ -1,7 +1,7 @@
 /*Create an HTML file and a CSS file. Make the background color of the body red when the width of the viewport is smaller than 480px, green when the viewport width is bigger than (or equal to) 480px and smaller than 1024px, and blue when the viewport is bigger than (or equal to) 1024px.*/
 
 
-body {
+/*body {
     background-color: red;
 }
 
@@ -15,13 +15,13 @@ body {
     body {
         background-color: blue;
     }
-}
+}*/
 
 /*Add three div: one div with the id="small", one div with the id="medium", another div with the id="large". In each element add the word small, medium and large respectively as content for display purposes.
 
 Make it so only one div is displayed, according to the width of the current viewport.*/
 
-#medium, #large {
+/*#medium, #large {
     display: none;
 }
 
@@ -36,6 +36,53 @@ Make it so only one div is displayed, according to the width of the current view
 }
 
 @media only screen and (min-width: 1024px) {
+    #small {
+        display: none;
+    }
+
+    #medium {
+        display: none;
+    }
+
+    #large {
+        display: block;
+    }
+}*/
+
+/*In each div, add a title and a few paragraphs (lorem ipsum, and such). Give the title a descriptive text (for example: "Content for smartphones") Change the font size according to the device type.*/
+
+body {
+    background-color: red;
+    font-size: 2rem;
+}
+
+#medium, #large {
+    display: none;
+}
+
+/*medium*/
+@media only screen and (min-width: 480px) {
+    body {
+        background-color: green;
+        font-size: 1.5rem;
+    }
+
+    #small {
+        display: none;
+    }
+
+    #medium {
+        display: block;
+    }
+}
+
+/*large*/
+@media only screen and (min-width: 1024px) {
+    body {
+        background-color: blue;
+        font-size: 1rem;
+    }
+
     #small {
         display: none;
     }
